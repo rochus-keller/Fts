@@ -228,7 +228,7 @@ IndexEngine::DocHits IndexEngine::find(const QString & s, bool partial, bool rev
 		partial = false;
 		term.chop(1);
 	}
-	if( !partial && d_ste != 0 )
+	if( d_ste != 0 ) // && !partial // ohne stem findet man hits wie z.B. zu "companies" nicht
 		term = d_ste->stem( term );
 	QList<quint32> nrs;
 	if( partial || reverse )
