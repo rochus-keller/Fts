@@ -2,13 +2,13 @@
 #define INDEXENGINE_H
 
 /*
-* Copyright 2016-2017 Rochus Keller <mailto:me@rochus-keller.info>
+* Copyright 2016-2017 Rochus Keller <mailto:me@rochus-keller.ch>
 *
 * This file is part of the CrossLine full-text search Fts library.
 *
 * The following is the license that applies to this copy of the
 * library. For a license to use the library under conditions
-* other than those described here, please email to me@rochus-keller.info.
+* other than those described here, please email to me@rochus-keller.ch.
 *
 * GNU General Public License Usage
 * This file may be used under the terms of the GNU General Public
@@ -76,7 +76,7 @@ namespace Fts
 		void resolveDocuments(bool on) { d_resolveDocuments = on; }
 		bool checkEmpty() const { return d_checkEmpty; }
 		void checkEmpty(bool on) { d_checkEmpty = on; }
-		static IndexEngine* getIndex( Udb::Transaction* ); // funktioniert sowohl für Db als auch Index Txn
+		static IndexEngine* getIndex( Udb::Transaction* ); // funktioniert sowohl fÃ¼r Db als auch Index Txn
 	private slots:
 		void onDbUpdate( const Udb::UpdateInfo& info );
 	protected:
