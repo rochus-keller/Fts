@@ -273,7 +273,7 @@ IndexEngine::DocHits IndexEngine::find(const QString & s, bool partial, bool rev
 				hit1 = &hits[ doc ];
 				hit1->d_doc = doc;
 				hit1->d_rank += readFreq( m.getValue() );
-			}else if( n == 3 )
+            }else if( n == 3 && hit1 != 0 && hit1->d_doc == doc )
 			{
 				Q_ASSERT( hit1 != 0 && hit1->d_doc == doc );
 				ItemHit h;
